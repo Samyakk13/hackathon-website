@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitledvset-hackathon</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4e7f435dba.js" crossorigin="anonymous"></script>
+
+    <style>
+        .timer{
+             height: 100vh;
+            padding: 13px;
+            margin: 0px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url("/bg.png");
+            background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+        }
+        #demo{
+            font-size: 55px;
+        }
+        .link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .link-item{
+            margin: 0px 13px;
+            font-size: 23px;
+        }
+
+        .link-item:hover{
+            color: blue;
+        }
+
+        a{
+          color: black;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="timer">
+        <div class="text">
+            <p id="demo"></p>
+        </div>
+
+        <div class="link">
+            <a href="https://instagram.com/untitledvset?igshid=ZDdkNTZiNTM="><i class="fa-brands fa-instagram link-item"></i></a>
+            <a href="https://t.me/untitledvset"><i class="fa-brands fa-telegram link-item"></i></a>
+            <a href="https://discord.gg/jBAgUz4n"><i class="fa-brands fa-discord link-item"></i></a>
+            <a href="https://www.youtube.com/channel/UCNRlarPmh3BjH4oJXoHxX6g"><i class="fa-brands fa-youtube link-item"></i></a>
+        </div>
+        
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jun 9, 2023 22:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+        
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+        
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+          // Display the result in the element with id="demo"
+          document.getElementById("demo").innerHTML = hours + "h "
+          + minutes + "m " + seconds + "s ";
+        
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
